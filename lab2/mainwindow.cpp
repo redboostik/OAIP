@@ -42,7 +42,7 @@ void MainWindow::on_AddBook_clicked()
 
     QString s = ui->FourthAddLine->text();
     ui->FourthAddLine->clear();
-    QStringList ss = s.split(' ');
+    QStringList ss = s.split('.');
     QDate* date = new QDate;
     date->setDate(ss[2].toInt(), ss[1].toInt(), ss[1].toInt());
     book->SetPublicationDate(date);
