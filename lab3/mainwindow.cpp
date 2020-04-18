@@ -77,7 +77,7 @@ void MainWindow::on_ViewBooks_clicked()
     }
     i++;
     QString s;
-    s = QString::number(i) + " Book:\nCode: " + now->Code + "\nTitle: " + now->Title + "\nAuthor: " + now->Author + "\nPublishing" + now->Publishing +
+    s = QString::number(i) + " Book:\nCode: " + now->Code + "\nTitle: " + now->Title + "\nAuthor: " + now->Author + "\nPublishing: " + now->Publishing +
         "\nYear of creating: " + now->publicationDate + "\nNumber of pages: " + now->Pages + "\n\n";
     ui->plainTextEdit->insertPlainText(s);
 }
@@ -94,7 +94,6 @@ void MainWindow::on_FindBooks_clicked()
     QString sTitle = ui->FindTitle->text();
     QString sYear = ui->FindYearOfCreated->text();
 
-    if(get_int(sYear)); else return;
 
     ui->FindCode->clear();
     ui->FindTitle->clear();
